@@ -1,0 +1,34 @@
+<div>
+	<div class='header'>
+    <b>Somenote</b>
+    <p>请登录</p>
+  </div>
+<form>
+  <div class="form-group">
+    <div>
+      <input type="text" class="form-control" placeholder="User" ng-model='updata.username'>
+    </div>
+  </div>
+  <div class="form-group">
+    <div>
+      <input type="password" class="form-control" placeholder="Password" ng-model='updata.password'>
+    </div>
+  </div>
+  <div class="form-group">
+    <div>
+      <div class="checkbox">
+        <label>
+          <input type="checkbox" ng-model='check'> Remember me
+        </label>
+      </div>
+    </div>
+  </div>
+  <div class="form-group">
+    <div>
+      <button class='login' ng-click='log()'>log in</button>
+      <button class='signin' ui-sref='zhuce'>Sign in</button>
+    </div>
+  </div>
+</form>
+</div>
+<div ui-view></div>
