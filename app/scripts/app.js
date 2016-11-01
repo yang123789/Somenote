@@ -8,8 +8,6 @@
  *
  * Main module of the application.
  */
-
-
   angular
   .module('noteApp', ['ui.router','ngCookies']).constant('servers','http://www.somenote.cn:1510').controller("app",function($scope,$http){
     
@@ -25,6 +23,15 @@
     }).state("contain",{
       url:"/contain",
       templateUrl:"views/contain.html",
+      controller:"c"
+    }).state("add",{
+      url:"/add",
+      templateUrl:"views/add.html",
+      controller:"c"
+    }).state("adit",{
+      url:"/adit?id&title&content",
+      templateUrl:"views/adit.html",
+      controller:"c"
     })
     $urlRouterProvider.when('','/denglu')
   })

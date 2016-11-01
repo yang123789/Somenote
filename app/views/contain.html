@@ -17,23 +17,36 @@
       <form class="navbar-left" role="search">
         <p>所有日记</p>
         <p>标签</p>
-        <p>查找</p>
+        <p ng-click='chazhao()'>查找</p>
         <p>修改密码</p>
-        <p>退出</p>
+        <p ng-click='out()'>退出</p>
       </form>
     </div><!-- /.navbar-collapse -->
   </div><!-- /.container-fluid -->
 </nav>
-<div class="panel-group" id="accordion">
+<div>
+<div ng-show='yin'>
+	<input type="text" class="form-control int" placeholder="Search" ng-model='fit'>
+</div>
+<div class="panel-group" id="accordion" ng-repeat='x in data | filter:fit'>
   <div class="panel panel-default">
     <div class="panel-heading"  id="headingThree">
-      <h4 class="panel-title">
-          日记标题
-      </h4>
+	    <b>{{x.title}}</b>
+      <b ng-repeat='y in x.tag' class="label label-success">{{y}}</b>
+	    <p class='glyphicon glyphicon-pencil' ui-sref='adit({id:x.id,title:x.title,content:x.content})' data-toggle="modal" data-target="#myModal"></p>
+	    <p class='glyphicon glyphicon-trash' ng-click="del(x)"></p>
     </div>
-   <div>时间</div>
-   <div>内容</div>
+   <p class='zy_time'>时间</p>
+   <p class='zy-co'> {{x.content}}</p>
   </div>
 </div>
-
 </div>
+<div class='btnprev'>
+	<button class='btn btn-warning' ng-click='prev()'>上一页</button>
+	<button class='btn btn-warning' ng-click='next()'>下一页</button>
+</div>
+<div class='zy_jia'>
+	<div class='glyphicon-plus' ng-click='add()'></div>
+</div>
+</div>
+<div ui-view></div>

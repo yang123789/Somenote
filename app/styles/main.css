@@ -11,4 +11,15 @@ form{width:98%;margin-left:1%;}
 .anni{width:10%;height:20px;}
 #accordion{width:96%;margin-left:2%;}
 .navbar-left p{width:100%;}
+.glyphicon-plus{width:50px;height:50px;background:#ddd9d9;margin-left:46%;line-height:50px;text-align:center;border-radius: 50%;font-weight:bold;}
+.add-header{width:100%;height:40px;background:#ddd9d9;line-height:40px;font-weight:bold;}
+.fanhui{float:left;margin-left:2%;color:black;}
+.glyphicon{float:right;margin-right:2%;color:black;margin-top:10px;}
+.zy_time{border-bottom:1px solid #eee;width:98%;margin-left:1%;height:30px;line-height:30px;}
+.ng-binding{width:98%;margin-left:1%;}
+.btnprev{width:96%;margin-left:2%;}
+.zy_jia{width:100%;}
+.int{width:96%;margin-left:2%;margin-bottom:20px;}
+#headingThree{height:40px;}
+
 

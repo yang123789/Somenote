@@ -6,21 +6,21 @@
 <form name="ff">
   <div class="form-group">
     <div>
-      <input type="text" class="form-control" placeholder="User" ng-model="updata.username" name="ue" ng-pattern='/^[a-z][a-z0-9]{5,12}$/' required>
+      <input type="text" class="form-control" placeholder="User" ng-model="updata.username" name="ue" ng-pattern='/^[a-z0-9A-Z]{5,12}$/' required>
       <span ng-show="ff.ue.$invalid">请输入6-12位字符</span>
       <span ng-hide="ff.ue.$invalid">输入正确</span>
     </div>
   </div>
   <div class="form-group">
     <div>
-      <input type="password" class="form-control" placeholder="Password" ng-pattern='/^[a-z][a-z0-9]{5,12}$/'ng-model="updata.password"  name="ue1"  required>
+      <input type="password" class="form-control" placeholder="Password" ng-pattern='/^[a-zA-Z0-9]{5,12}$/'ng-model="updata.password"  name="ue1"  required>
       <span ng-show="ff.ue1.$invalid" >请输入密码</span>
       <span ng-hide="ff.ue1.$invalid">输入正确</span>
     </div>
   </div>
   <div class="form-group">
     <div>
-      <input type="password" class="form-control" placeholder="Password" ng-model="ppp"   name="ue2" required ng-pattern='/^[a-z][a-z0-9]{5,12}$/'>
+      <input type="password" class="form-control" placeholder="Password" ng-model="ppp"   name="ue2" required ng-pattern='/^[a-z0-9A-Z]{5,12}$/'>
       <span ng-show="ff.ue2.$invalid">请再次输入密码</span>
       <span ng-hide="ff.ue2.$invalid">输入正确</span>
     </div>
